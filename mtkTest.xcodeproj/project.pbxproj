@@ -12,6 +12,21 @@
 		F05472CD21124062001E775C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05472CB21124062001E775C /* Main.storyboard */; };
 		F05472CF21124068001E775C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05472CE21124068001E775C /* Assets.xcassets */; };
 		F05472D221124068001E775C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05472D021124068001E775C /* LaunchScreen.storyboard */; };
+		F05472DA21124360001E775C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472D921124360001E775C /* Renderer.swift */; };
+		F05472DC211249CB001E775C /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F05472DB211249CB001E775C /* shader.metal */; };
+		F05472DE21125816001E775C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472DD21125816001E775C /* Node.swift */; };
+		F05472E021125902001E775C /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472DF21125902001E775C /* Plane.swift */; };
+		F05472E221125C98001E775C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472E121125C98001E775C /* Scene.swift */; };
+		F05472E421125D05001E775C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472E321125D05001E775C /* GameScene.swift */; };
+		F05472E8211262C0001E775C /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472E7211262C0001E775C /* Types.swift */; };
+		F05472EA21126819001E775C /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472E921126819001E775C /* Renderable.swift */; };
+		F05472ED21127112001E775C /* matador2015.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F05472EC21127112001E775C /* matador2015.jpg */; };
+		F05472EF21127140001E775C /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472EE21127140001E775C /* Texturable.swift */; };
+		F05472F121127BE0001E775C /* matador.png in Resources */ = {isa = PBXBuildFile; fileRef = F05472F021127BE0001E775C /* matador.png */; };
+		F05472F421129046001E775C /* picture-frame-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = F05472F221129046001E775C /* picture-frame-mask.png */; };
+		F05472F521129046001E775C /* picture-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = F05472F321129046001E775C /* picture-frame.png */; };
+		F05472F721129537001E775C /* MatrixMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472F621129537001E775C /* MatrixMath.swift */; };
+		F05472F92114E681001E775C /* mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F05472F82114E681001E775C /* mars.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +37,21 @@
 		F05472CE21124068001E775C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F05472D121124068001E775C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F05472D321124068001E775C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05472D921124360001E775C /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		F05472DB211249CB001E775C /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		F05472DD21125816001E775C /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F05472DF21125902001E775C /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		F05472E121125C98001E775C /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F05472E321125D05001E775C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F05472E7211262C0001E775C /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		F05472E921126819001E775C /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		F05472EC21127112001E775C /* matador2015.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = matador2015.jpg; sourceTree = "<group>"; };
+		F05472EE21127140001E775C /* Texturable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
+		F05472F021127BE0001E775C /* matador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matador.png; sourceTree = "<group>"; };
+		F05472F221129046001E775C /* picture-frame-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-frame-mask.png"; sourceTree = "<group>"; };
+		F05472F321129046001E775C /* picture-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-frame.png"; sourceTree = "<group>"; };
+		F05472F621129537001E775C /* MatrixMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMath.swift; path = "../../../Downloads/7 - Matrices/Final/RayBreak/RayBreak/MatrixMath.swift"; sourceTree = "<group>"; };
+		F05472F82114E681001E775C /* mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +86,52 @@
 			children = (
 				F05472C721124062001E775C /* AppDelegate.swift */,
 				F05472C921124062001E775C /* ViewController.swift */,
+				F05472E7211262C0001E775C /* Types.swift */,
+				F05472D921124360001E775C /* Renderer.swift */,
+				F05472E521125D87001E775C /* Scenes */,
+				F05472E621125D95001E775C /* Nodes */,
+				F05472DB211249CB001E775C /* shader.metal */,
+				F05472EE21127140001E775C /* Texturable.swift */,
+				F05472F621129537001E775C /* MatrixMath.swift */,
+				F05472E921126819001E775C /* Renderable.swift */,
 				F05472CB21124062001E775C /* Main.storyboard */,
+				F05472EB21127112001E775C /* images */,
 				F05472CE21124068001E775C /* Assets.xcassets */,
 				F05472D021124068001E775C /* LaunchScreen.storyboard */,
 				F05472D321124068001E775C /* Info.plist */,
 			);
 			path = mtkTest;
 			sourceTree = "<group>";
+		};
+		F05472E521125D87001E775C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F05472E121125C98001E775C /* Scene.swift */,
+				F05472E321125D05001E775C /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F05472E621125D95001E775C /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F05472DD21125816001E775C /* Node.swift */,
+				F05472DF21125902001E775C /* Plane.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F05472EB21127112001E775C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F05472F82114E681001E775C /* mars.jpg */,
+				F05472F221129046001E775C /* picture-frame-mask.png */,
+				F05472F321129046001E775C /* picture-frame.png */,
+				F05472F021127BE0001E775C /* matador.png */,
+				F05472EC21127112001E775C /* matador2015.jpg */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -123,7 +192,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F05472D221124068001E775C /* LaunchScreen.storyboard in Resources */,
+				F05472F521129046001E775C /* picture-frame.png in Resources */,
+				F05472F92114E681001E775C /* mars.jpg in Resources */,
 				F05472CF21124068001E775C /* Assets.xcassets in Resources */,
+				F05472ED21127112001E775C /* matador2015.jpg in Resources */,
+				F05472F121127BE0001E775C /* matador.png in Resources */,
+				F05472F421129046001E775C /* picture-frame-mask.png in Resources */,
 				F05472CD21124062001E775C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +209,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05472DC211249CB001E775C /* shader.metal in Sources */,
+				F05472DE21125816001E775C /* Node.swift in Sources */,
+				F05472E421125D05001E775C /* GameScene.swift in Sources */,
+				F05472EA21126819001E775C /* Renderable.swift in Sources */,
+				F05472DA21124360001E775C /* Renderer.swift in Sources */,
 				F05472CA21124062001E775C /* ViewController.swift in Sources */,
+				F05472F721129537001E775C /* MatrixMath.swift in Sources */,
+				F05472E221125C98001E775C /* Scene.swift in Sources */,
+				F05472E8211262C0001E775C /* Types.swift in Sources */,
+				F05472E021125902001E775C /* Plane.swift in Sources */,
+				F05472EF21127140001E775C /* Texturable.swift in Sources */,
 				F05472C821124062001E775C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A8UZ6XF9N;
 				INFOPLIST_FILE = mtkTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A8UZ6XF9N;
 				INFOPLIST_FILE = mtkTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
