@@ -76,6 +76,18 @@ class Plane: Node {
         pipelineState = buildPipelineState(device: device)
     }
     
+    init(device: MTLDevice, width: Int, height: Int){
+        super.init();
+        if let texture = emptyTexture(device: device, width: width, height: height){
+            self.texture = texture
+            fragmentFunctionName = "redTexture"
+            vertexFunctionName = "fullScreen"
+        }
+        
+        buildBuffers(device: device)
+        pipelineState = buildPipelineState(device: device)
+    }
+    
     init(device: MTLDevice, imageName: String, maskImageName: String){
         super.init()
         if let texture = setTexture(device: device, imageName: imageName) {
@@ -164,13 +176,11 @@ extension Plane: Renderable {
         commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         commandEncoder.setVertexBytes(&modelConstants, length: MemoryLayout<ModelConstants>.stride, index: 1) // sets a uniform
         
-        if(fragUniforms.time < 60 ){
-//            print("yass")
-            commandEncoder.setFragmentTexture(texture, index: 0)
-        } else {
-//            print("yass")
+//        if(fragUniforms.time < 60 ){
+//            commandEncoder.setFragmentTexture(texture, index: 0)
+//        } else {
             commandEncoder.setFragmentTexture(currentTexture, index: 0)
-        }
+//        }
         commandEncoder.setFragmentTexture(maskTexture, index: 1)
         
         fragUniforms.time += 1

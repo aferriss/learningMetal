@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         
         renderer = Renderer(device: device)
         renderer?.scene = GameScene(device: device, size: view.bounds.size)
+        renderer?.rttScene = RttScene(device: device, size: view.bounds.size)
         
         metalView.delegate = renderer
         

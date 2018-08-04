@@ -65,6 +65,8 @@ fragment half4 fragment_shader(VertexOut vertexIn [[ stage_in ]]){
     return half4(vertexIn.color);
 }
 
+
+
 //fragment half4 fragment_shader( VertexOut vertexIn [[ stage_in ]],
 //                               texture2d<float> texture [[texture(0) ]]
 //                               ){
@@ -98,6 +100,19 @@ float3 rgb2hsb( float3 c ){
                 q.x);
 }
 
+
+fragment half4 redTexture(VertexOut vertexIn [[ stage_in ]],
+                          sampler sampler2d [[ sampler(0) ]],
+                          texture2d<float> texture [[texture(0) ]],
+                          constant FragUniforms &fragUniforms [[ buffer(2) ]]
+                          ){
+    
+    float2 tc = vertexIn.textureCoordinates;
+    float4 color = texture.sample(sampler2d, tc);
+//    color.r *= 2.0;
+    return half4(color);
+}
+
 fragment FragmentOut textured_fragment( VertexOut vertexIn [[ stage_in ]],
                                        sampler sampler2d [[ sampler(0) ]],
                                        texture2d<float> texture [[texture(0) ]],
@@ -108,14 +123,12 @@ fragment FragmentOut textured_fragment( VertexOut vertexIn [[ stage_in ]],
     
     float2 tc = vertexIn.textureCoordinates;
     
-    if(fragUniforms.time > 60 ){
-        tc.y = 1.0 - tc.y;
-    }
+//    if(fragUniforms.time > 60 ){
+//        tc.y = 1.0 - tc.y;
+//    }
     
 
-    tc = 2.0 * tc - 1.0;
-    tc *= 0.995;
-    tc = tc * 0.5 + 0.5;
+
     
     float4 color = texture.sample(sampler2d, tc);
     
@@ -127,25 +140,32 @@ fragment FragmentOut textured_fragment( VertexOut vertexIn [[ stage_in ]],
     
 //    color.rgb = hsb2rgb(hsv);
     
-
+        tc = 2.0 * tc - 1.0;
+        tc *= 0.99;
+        tc = tc * 0.5 + 0.5;
+        tc.y *= 0.995;
     
-//    float4 color2 = texture.sample(sampler2d, tc + sin(hsv.r*6.2831)*0.001 );
+    float4 color2 = texture.sample(sampler2d, tc + float2(color.g - color.r, color.b - color.g)*0.01 );
     
-//    color2.rgb = rgb2hsb(color2.rgb);
-//    color2.r += 0.01;
+    color2.rgb = rgb2hsb(color2.rgb);
+    color2.r += 0.005;
 //    color2.r = fract(color2.r);
+    color2.g += 0.005;
+    color2.b += 0.0025;
+//    color2.b = fract(color2.b);
     
-//    color2.rgb = hsb2rgb(color2.rgb);
+    color2.rgb = hsb2rgb(color2.rgb);
+    color2.rgb = fract(color2.rgb);
 //    color.rgb = fract(color.rgb);
     
-    color.rgb -= 0.005;
-    color.rgb = fract(color.rgb);
+//    color.rgb -= 0.005;
+//    color.rgb = fract(color.rgb);
     
 //    if( color.a == 0.0){
 //        discard_fragment();
 //    }
-    
-    out.color0 = color;
+//    color.g *= 2.0;
+    out.color0 = color2;
 //    out.color1 = color+0.5;
     
     return out;

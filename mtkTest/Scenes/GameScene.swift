@@ -43,4 +43,6 @@ class GameScene: Scene {
 //        quad2.rotation.y += deltaTime
         
     }
+    
+    
 }

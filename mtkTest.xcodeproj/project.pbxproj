@@ -27,6 +27,7 @@
 		F05472F521129046001E775C /* picture-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = F05472F321129046001E775C /* picture-frame.png */; };
 		F05472F721129537001E775C /* MatrixMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472F621129537001E775C /* MatrixMath.swift */; };
 		F05472F92114E681001E775C /* mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F05472F82114E681001E775C /* mars.jpg */; };
+		F05472FB21152CED001E775C /* RttScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05472FA21152CED001E775C /* RttScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F05472F321129046001E775C /* picture-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-frame.png"; sourceTree = "<group>"; };
 		F05472F621129537001E775C /* MatrixMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMath.swift; path = "../../../Downloads/7 - Matrices/Final/RayBreak/RayBreak/MatrixMath.swift"; sourceTree = "<group>"; };
 		F05472F82114E681001E775C /* mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars.jpg; sourceTree = "<group>"; };
+		F05472FA21152CED001E775C /* RttScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RttScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				F05472E121125C98001E775C /* Scene.swift */,
 				F05472E321125D05001E775C /* GameScene.swift */,
+				F05472FA21152CED001E775C /* RttScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				F05472E221125C98001E775C /* Scene.swift in Sources */,
 				F05472E8211262C0001E775C /* Types.swift in Sources */,
 				F05472E021125902001E775C /* Plane.swift in Sources */,
+				F05472FB21152CED001E775C /* RttScene.swift in Sources */,
 				F05472EF21127140001E775C /* Texturable.swift in Sources */,
 				F05472C821124062001E775C /* AppDelegate.swift in Sources */,
 			);
